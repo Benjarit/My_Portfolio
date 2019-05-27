@@ -9,6 +9,8 @@ import { CareersComponent } from './careers/careers.component';
 import { BackgroundComponent } from './background/background.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { InputUserDataFormComponent } from './input-user-data-form/input-user-data-form.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,11 +20,14 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     CareersComponent,
     BackgroundComponent,
     ContactsComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    InputUserDataFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
     NgbModule.forRoot()
   ],
   providers: [],
