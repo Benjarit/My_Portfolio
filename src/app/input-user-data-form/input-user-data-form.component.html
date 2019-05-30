@@ -1,35 +1,21 @@
-<form>
-	<div class="form-group has-error"> <!-- First Name -->
-		<label for="first_name" class="control-label">First Name</label>
-		<input type="text" class="form-control" id="first_name" name="first_name" placeholder="Martin">
-		<p id="first_name_error" class="help-block">Invalid first name.</p>
-	</div>
+ <div style="border: 1px solid #d8d8d8; box-shadow:0 1px 5px 1px #d8d8d8; margin: 15%">
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="text-center border border-light p-5">
+      <p class="h4 mb-4">Sign up</p>
 
-	<div class="form-group has-error"> <!-- Last Name -->
-		<label for="last_name" class="control-label">Last Name</label>
-		<input type="text" class="form-control" id="last_name" name="last_name" placeholder="Toha">
-		<p id="last_name_error" class="help-block">Invalid last name.</p>
-	</div>
+      <div class="form-row mb-4">
+          <div class="col">
+              <input type="text" formControlName="firstName" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name">
+          </div>
+          <div class="col">
+              <input type="text" formControlName="lastName" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name">
+          </div>
+      </div>
 
-	<div class="form-group has-error"> <!-- Email -->
-		<label for="email" class="control-label">E-mail</label>
-		<input type="text" class="form-control" id="email" name="email" placeholder="your@email.com">
-		<p id="email_error" class="help-block">Invalid email address.</p>
-	</div>
-							
-	<div class="form-group has-error"> <!-- Zip Code -->
-		<label for="zipcode" class="control-label">Zip Code</label>
-		<input type="text" class="form-control" id="zipcode" name="zipcode" placeholder="#####">
-		<p id="zipcode_error" class="help-block">Invalid zip code.</p>
-	</div>
+      <input type="email" formControlName="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
 
-	<div class="form-group has-error"> <!-- Password -->
-		<label for="password" class="control-label">Password</label>
-		<input type="text" class="form-control" id="password" name="password" placeholder="*****">
-		<p id="password_error" class="help-block">Invalid password.</p>
-	</div>
-	
-	<div class="form-group has-error"> <!-- Register Button -->
-		<button type="submit" class="btn btn-primary">Register</button>
-	</div>
-</form>	
+      <button class="btn btn-info my-4 btn-block" type="submit">Sign in</button>
+
+      <hr>
+
+    </form>
+</div>
