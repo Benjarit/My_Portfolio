@@ -1,24 +1,34 @@
-<div style="margin-bottom: 250px;">
-    <nav style="height: 150px;" class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-      <button class="navbar-toggler btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" 
-       aria-expanded="false" aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="navbarTogglerDemo02">
+<div>
+    <nav style="height: 65px;" class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-buttom" alt=""><span style="font-weight: 600">Ben H.</span></a>
+      <button class="navbar-toggler btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#navbarToggler" 
+       aria-expanded="false" aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="navbarToggler">
         <span class="navbar-toggler-icon"></span>
       </button>
-        <div class="collapse navbar-collapse" id="navbarToggler" [ngbCollapse]="isCollapsed">
-          <ul style="margin: auto; font-size: 25px " class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li  class="nav-item">
-              <a style="color:black" class="nav-link" routerLink="/careers">CAREERS</a>
-            </li>
-            <div class="divider"></div>
-            <li class="nav-item">
-              <a style="color:black" class="nav-link" routerLink="/background">BACKGROUND</a>
-            </li>
-            <div class="divider"></div>
-            <li class="nav-item">
-              <a style="color:black" class="nav-link" routerLink="/contacts">CONTACTS</a>
-            </li>
-          </ul>
-        </div>
+      <div class="collapse navbar-collapse" id="navbarToggler" [ngbCollapse]="isCollapsed">
+        <ul style="margin: auto; font-size: 15px " class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li  class="nav-item">
+            <a style="color:#4a4a4a" class="nav-link" routerLink="/careers"><span class="my-nav-link">CAREERS</span></a>
+          </li>
+          <div class="divider"></div>
+          <li class="nav-item">
+            <a style="color:#4a4a4a" class="nav-link" routerLink="/background"><span class="my-nav-link">BACKGROUND</span></a>
+          </li>
+          <div class="divider"></div>
+          <li class="nav-item">
+            <a style="color:#4a4a4a" class="nav-link" routerLink="/contacts"><span class="my-nav-link">CONTACTS</span></a>
+          </li>
+        </ul>
+        <a href="https://github.com/benjarit"><img src="assets/img/GitHub.png" width="20" height="20" class="d-inline-block align-buttom" alt=""></a>
+        <div style="width:15px;height:auto;display:inline-block;"></div>
+        <a href="https://www.linkedin.com/in/benjarit-hotra/"><img src="assets/img/linkedin.png" width="20" height="20" class="d-inline-block align-buttom" alt=""></a>
+        <div style="width:15px;height:auto;display:inline-block;"></div>
+        <a href="#"><img src="assets/img/gmail.png" width="20" height="20" class="d-inline-block align-buttom" alt=""></a> 
+        <div style="width:15px;height:auto;display:inline-block;"></div>
+      </div>
+
+      
     </nav>
 </div>
 
