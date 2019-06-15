@@ -6,7 +6,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 
 const routes: Routes = [
-  {path: '', component: LandingPageComponent},
+  { path: '', redirectTo: '/careers', pathMatch: 'full' },
   {path: 'careers', component: CareersComponent},
   {path: 'background', component: BackgroundComponent},
   {path: 'contacts', component: ContactsComponent}
