@@ -8,7 +8,7 @@ import { FormBuilder,FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./input-user-data-form.component.scss']
 })
 export class InputUserDataFormComponent implements OnInit {
-  private userForm: FormGroup;
+  userForm: FormGroup;
   constructor(private formBuilder: FormBuilder) { }  
   ngOnInit() {
     this.userForm = this.formBuilder.group({
