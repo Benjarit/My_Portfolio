@@ -4,3 +4,7 @@ body{
     overflow-x: hidden;
     overflow-y: scroll;
 }
+body, html{
+    height: 100%;
+    margin: 0;
+}

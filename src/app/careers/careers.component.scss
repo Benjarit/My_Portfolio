@@ -1,5 +1,13 @@
-#image1{
-  width: 100%;
+
+.bg {
+  /* The image used */
+  background: url('/assets/img/career_cover.jpeg');
+  /* Full height */
+  height: 100%; 
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 p{
@@ -71,10 +79,29 @@ p{
   text-align: center;
 }
 .paragraph {
-  padding-top: 10px;
-  line-height: 30px;
+  padding-top: 25px;
+  line-height: 40px;
   letter-spacing: 0.16px;
-  font-size: 14px;
+  font-size: 18px;
   width: 250px;
   margin: auto;
+}
+
+.mobile-button {
+  text-decoration: none;
+  border: .5px solid black;
+  background-color: white;
+  color:black;
+  height: 46px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  letter-spacing: 0.19px;
+}
+.mobile-button:hover {
+  color: white;
+  background-color: #4a4a4a;
+  transition: 0.5s;
 }

@@ -1,9 +1,7 @@
-<div style="width: 100%;position: relative; overflow: hidden;">
-        <img style="width: 100%; max-width: 100%; max-height: 100vh; margin: auto;" src="assets/img/career_cover.jpeg" alt="Random second slide">
-        <div class="center">
-            <H1 style="font-weight:700;color:white;text-align: center;font-size:3.5rem;">"Coding Like A Rockstar!"</H1>
-            <H1 style="font-weight:400;color:white;text-align: center;font-size:2.5rem;">Ben H.</H1>
-        </div>
+<div class="bg"></div>
+<div class="center">
+    <H1 style="font-weight:700;color:white;text-align: center;font-size:3.5rem;">"Coding Like A Rockstar!"</H1>
+    <H1 style="font-weight:400;color:white;text-align: center;font-size:2.5rem;">Ben H.</H1>
 </div>
 
 <div class="container" style="padding-top:100px;">
@@ -121,11 +119,11 @@
 </div>
 
 
-<div class="container" >
+<div class="container">
     <div class="home-section-header header-container ">
         <div class="left"></div>
         <div class="header">
-            <h2>Why people want to me</h2>
+            <h2>Why People Want Me</h2>
         </div>
         <div class="right"></div>
     </div>
@@ -166,7 +164,12 @@
         <div class="col-lg-8">
                 <H1 style="font-weight:700;">Workflow Management System.</H1>
             <div style="padding-top: 60px; position: relative; width: 90%;">
-                <p style="padding-left: 10px; border-left: 1px solid;">Ben started flying RC Helicopter when he was only 9 years old. He then got involved in many conpetitions worldwide. He was ranked  World No. 11 at the age of 13.<br>(2009-2013)</p>
+                <p style="padding-left: 10px; border-left: 1px solid;">{{workflowDescription}}</p>
+                <ul>
+                    <li *ngFor="let resp of workflowResponsibility">
+                        {{resp}}
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="col-lg-4">
@@ -178,9 +181,14 @@
                 <img class="img-fluid" id="image1" alt="Bootstrap Image Preview" src="assets/img/argri.jpg">
         </div>
         <div class="col-lg-8" style="text-align: right;">
-            <H1 style="font-weight:700;">Web-Based Multi-Criteria Spatial Decision Support System.</H1>
+                <H1 style="font-weight:700;">Web-Based Multi-Criteria Spatial Decision Support System.</H1>
             <div style="padding-top: 60px;">
-                    <p style="padding-right: 10px; border-right: 1px solid;">Ben had offered affordable video editing services to more than 5 businesses. The videoes signicantly increased the number of sale activities and memberships.<br>(2015-2016)</p>
+                <p style="padding-right: 10px; border-right: 1px solid;">{{argricultureDescription}}</p>
+                <ul style="text-align: left;">
+                    <li *ngFor="let resp of workflowResponsibility">
+                        {{resp}}
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -188,7 +196,7 @@
         <div class="col-lg-8">
                 <H1 style="font-weight:700;">Supervisory Control and Data Acquisition System (SCADA).</H1>
             <div style="padding-top: 60px; position: relative; width: 90%;">
-                <p style="padding-left: 10px; border-left: 1px solid;">Ben started flying RC Helicopter when he was only 9 years old. He then got involved in many conpetitions worldwide. He was ranked  World No. 11 at the age of 13.<br>(2009-2013)</p>
+                <p style="padding-left: 10px; border-left: 1px solid;">{{scadaDescription}}</p>
             </div>
         </div>
         <div class="col-lg-4">
@@ -202,7 +210,7 @@
         <div class="col-lg-8" style="text-align: right;">
             <H1 style="font-weight:700;">Yaffle Networks</H1>
             <div style="padding-top: 60px;">
-                    <p style="padding-right: 10px; border-right: 1px solid;">Ben had offered affordable video editing services to more than 5 businesses. The videoes signicantly increased the number of sale activities and memberships.<br>(2015-2016)</p>
+                    <p style="padding-right: 10px; border-right: 1px solid;">{{yaffleDescription}}</p>
             </div>
         </div>
     </div>
@@ -218,7 +226,8 @@
     <div class="row">
         <div class="col-lg-5">
             <H1 style="font-weight:700;">Stats</H1>
-            <div style="padding-top: 60px; position: relative; width: 90%;">
+            <p>Powered by RESTful APIs</p>
+            <div style="padding-top: 40px; position: relative; width: 90%;">
                 <p style="padding-left: 10px; border-left: 1px solid;">1. </p>
             </div>
         </div>
@@ -227,7 +236,7 @@
         </div>
     </div>
 </div>
-<div class="container" style=" padding-bottom: 5%;">
+<div class="container" style="padding-bottom: 5%;">
     <div class="home-section-header header-container">
         <div class="left"></div>
         <div class="header">
@@ -235,15 +244,13 @@
         </div>
         <div class="right"></div>
     </div>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center"  style="padding-bottom: 5%;">
         <iframe src="https://drive.google.com/file/d/1y93_nJFTnBts68-s0DdUBf53mPfQDnee/preview" width="640" height="480"></iframe>
     </div>
-    <div class="row justify-content-center" style="padding-top: 100px">
-        <div class="col-lg">
-            <H3>Go Back Up</H3>
-        </div>
-        <div class="col-lg">
-            <H3>Next Page</H3>
+    <div class="section"></div>
+    <div class="row justify-content-center" style="text-align: center; padding-top: 100px">
+        <div class="col-lg-4">
+            <a routerLink="/background" class="mobile-button">Next Page</a>
         </div>
     </div>
 </div>
