@@ -21,7 +21,7 @@ export class BackgroundComponent implements OnInit {
 
   developerDescription = "Ben began using computers and writing software at the age of 15 when he took his first computer science class during his junior year in high school."+
   " The class was titled Introduction to C++ Programming. It was the class where he first learned about his own passion, and since then he always wanted to become a software engineer"+
-  " where he can help change the world to become a better place. With his, he decided to pursue for computer engineering degree in college.";
+  " where he can help change the world to become a better place. With this, he decided to pursue for computer engineering degree in college.";
 
   constructor() { }
 
