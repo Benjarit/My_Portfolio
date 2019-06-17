@@ -6,15 +6,14 @@ const { Client  } = require('pg');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
-// Serve only the static files form the dist directory
-// Replace the '/dist/<to_your_project_name>'
 app.use(express.static(__dirname + '/dist/my-portfolio'));
 
+console.log("Hey, This is from server.");
+
 const client = new Client({
-  connectionString: process.env.DATABASE_URL,
+  connectionString: 'postgres://xobkypwdmxwnxx:2af823a29661ed2051fdf9c7339ed08d0dea08dc3203987d40da275842dd3f42@ec2-23-21-91-183.compute-1.amazonaws.com:5432/d59f1gjjltj1so',
   ssl: true,
 });
-
 client.connect();
 client.query('SELECT * FROM public.job;', (err, res) => {
   if (err) throw err;
@@ -23,6 +22,7 @@ client.query('SELECT * FROM public.job;', (err, res) => {
   }
   client.end();
 });
+
 app.get('/api/forms', (req, res) => {
     res.send("api works")
 })
