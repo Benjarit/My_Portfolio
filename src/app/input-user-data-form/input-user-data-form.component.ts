@@ -14,17 +14,23 @@ export class InputUserDataFormComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private http: HttpClient) { }  
   ngOnInit() {
     this.userForm = this.formBuilder.group({
-      firstName: ['', [Validators.required, Validators.pattern('^[a-zA-Z]+$')]],
-      lastName: ['',[Validators.required, Validators.pattern('^[a-zA-Z]+$')]],
+      company: ['', [Validators.required, Validators.pattern('^[a-zA-Z]+$')]],
+      url: ['',[Validators.required, Validators.pattern('^[a-zA-Z]+$')]],
       email: ['', [Validators.required, Validators.email]]
     });
   }
   onSubmit(){
-      this.http.get('/api/forms')
-      .subscribe((response) => 
-        {
+      // this.http.get('/api/forms')
+      // .subscribe((response) => 
+      //   {
+      //     console.log('repsonse ',response);
+      //   }
+      // );
+      if(this.userForm.valid){
+        this.http.post('/api/form', this.userForm.value)
+        .subscribe((response)=>{
           console.log('repsonse ',response);
-        }
-      );
+        })
+      }
   }
 }
