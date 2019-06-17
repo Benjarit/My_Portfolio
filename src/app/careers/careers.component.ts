@@ -52,8 +52,8 @@ export class CareersComponent implements OnInit {
       $("#fadeUpContent").animate({ opacity: 1, top: "-70px" },"slow","linear");
     });
     
-    let obs = this.http.get('https://api.github.com/users/benjarit');
-    obs.subscribe((response) => 
+    this.http.get('https://api.github.com/users/benjarit')
+    .subscribe((response) => 
     {
       this.response = response;
     }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+
 
 
 @Component({
@@ -9,7 +11,7 @@ import { FormBuilder,FormGroup, Validators } from '@angular/forms';
 })
 export class InputUserDataFormComponent implements OnInit {
   userForm: FormGroup;
-  constructor(private formBuilder: FormBuilder) { }  
+  constructor(private formBuilder: FormBuilder, private http: HttpClient) { }  
   ngOnInit() {
     this.userForm = this.formBuilder.group({
       firstName: ['', [Validators.required, Validators.pattern('^[a-zA-Z]+$')]],
@@ -18,10 +20,11 @@ export class InputUserDataFormComponent implements OnInit {
     });
   }
   onSubmit(){
-    if(this.userForm.valid){
-      alert('User form is valid!!')
-    } else {
-      alert('User form is not valid!!')
-    }
+      this.http.get('/api/forms')
+      .subscribe((response) => 
+        {
+          console.log('repsonse ',response);
+        }
+      );
   }
 }
