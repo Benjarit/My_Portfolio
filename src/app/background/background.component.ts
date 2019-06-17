@@ -11,13 +11,13 @@ export class BackgroundComponent implements OnInit {
   
   heliDescription = "Ben started flying RC Helicopter when he was only 9 years old. He had competed in many world competitions with 3D as well as F3C, then he was approached by Align Corporation"+
   " to be a presenter/tester of their products. Align was and still be one of the top well-known companies in the world for quality unmanned aerial vehicle and other electronic components,"+
-  " such as speed controllers, brushless motors, etc. He was ranked World No. 11 at the age of 13."
+  " such as speed controllers, brushless motors, etc. He was ranked World No. 11 at the age of 13.";
 
   producerDescription = "Ben had offered affordable video editing services to more than 5 businesses."+ 
   " The videoes signicantly increased the number of sale activities and memberships to those businesses. He loves to creative video"+ 
   " content that engages audiences through the right message with impressive results from time to time within the affordable budget."+ 
   " Ben had to effectively communicate to all team members while working effectively under multiple deadlines, and function under pressure."+ 
-  " This is a full-time entry level position."
+  " This is a full-time entry level position.";
 
   developerDescription = "Ben began using computers and writing software at the age of 15 when he took his first computer science class during his junior year in high school."+
   " The class was titled Introduction to C++ Programming. It was the class where he first learned about his own passion, and after that he always wanted to become a software engineer"+
