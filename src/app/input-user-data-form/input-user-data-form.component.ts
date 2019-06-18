@@ -15,22 +15,18 @@ export class InputUserDataFormComponent implements OnInit {
   ngOnInit() {
     this.userForm = this.formBuilder.group({
       company: ['', [Validators.required, Validators.pattern('^[a-zA-Z]+$')]],
-      url: ['',[Validators.required, Validators.pattern('^[a-zA-Z]+$')]],
+      url: ['',[Validators.required, Validators.required]],
       email: ['', [Validators.required, Validators.email]]
     });
   }
   onSubmit(){
-      // this.http.get('/api/forms')
-      // .subscribe((response) => 
-      //   {
-      //     console.log('repsonse ',response);
-      //   }
-      // );
       if(this.userForm.valid){
         this.http.post('/api/form', this.userForm.value)
         .subscribe((response)=>{
           console.log('repsonse ',response);
         })
+      }else {
+        alert('User form is not valid!!')
       }
   }
 }
