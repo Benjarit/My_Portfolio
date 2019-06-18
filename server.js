@@ -23,11 +23,10 @@ app.get('/api/forms', (req, res) => {
 app.post('/api/form', (req, res) => {
     var myTimestamp = moment(Date.now()).format('YYYY-MM-DD HH:mm:ss');
     client.query('INSERT INTO job (company, email, url, timestamp) VALUES (?, ?, ? ,?);',(req.body.company,req.body.email,req.body.url, myTimestamp), (err, result) => {
-        res.json(result)
+        res.json({data: req.body});
     });
+    client.end();
 })
-client.end();
-
 
 app.get('/*', function(req, res) {
     res.sendFile(path.join(__dirname + '/dist/my-portfolio/index.html'));
