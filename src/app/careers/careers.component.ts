@@ -33,10 +33,10 @@ export class CareersComponent implements OnInit {
           "he had contributed his work to many meaningful projects that help enhancing people lives including students, faculties, researches, and farmers.";
     
     this.workflowDescription = "A valuable system that is currently being used by the whole engineering department. The system"+
-    " allows faculties and students to submit administrative work requests online. use it for submitting tickets for fiscal, HR and marketing/communications tasks, such as student orgs purchasing card requests,"+
+    " allows faculties and students to submit administrative work requests online. People can use it for submitting tickets for fiscal, HR and marketing/communications tasks, such as student orgs purchasing card requests,"+
     " website edits, and digital marketing requests which reduce the requests processing time by 50%.";
     
-    this.argricultureDescription = "Ben had developed an application that is meant to help farmers and extension agents understand the trees growing nearby which maybe useful for agroforestry systems."+
+    this.argricultureDescription = "Ben had developed an application that is meant to help farmers and extension agents to understand the trees growing nearby which maybe useful for agroforestry systems."+
     " The application will also provide some data on the soil and climate of farmers' farm.";
 
     this.scadaDescription = "A centralized systems which monitor and control entire sites, or complexes of systems spread out over large areas (anything from an industrial plant to a nation)."+
