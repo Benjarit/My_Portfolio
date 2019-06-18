@@ -28,8 +28,8 @@ app.post('/api/form', (req, res) => {
         if (err){
           throw err;  
         } 
-        // res.send(results);
-        // client.end();
+        res.send('New form added successfully with id: ' + results.insertId);
+        client.end();
     });
 });
 
