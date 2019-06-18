@@ -19,16 +19,19 @@ app.get('/api/all', (req, res) => {
     client.query('SELECT * FROM public.job', (err, results) => {
         if (err) throw err;
         res.json(results.rows);
+        client.end();
     });
-})
+});
+
 app.post('/api/form', (req, res) => {
     client.query('INSERT INTO public.job (company, email, url, timestamp) VALUES ($1, $2, $3, $4)',[req.body.company,req.body.email,req.body.url, new Date()], (err, results) => {
         if (err){
           throw err;  
         } 
-        res.status(201).send(`Form added with ID: ${results.job_id}`);
+        res.send('Form added with ID:',results);
+        client.end();
     });
-})
+});
 
 app.get('/*', function(req, res) {
     res.sendFile(path.join(__dirname + '/dist/my-portfolio/index.html'));
