@@ -15,7 +15,7 @@ const client = new Client({
 });
 client.connect();
 
-app.get('/api/forms', (req, res) => {
+app.get('/api/all', (req, res) => {
     client.query('SELECT * FROM public.job;', (err, result) => {
         if (err) throw err;
         res.json(result);
