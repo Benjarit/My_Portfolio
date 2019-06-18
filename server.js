@@ -28,9 +28,14 @@ app.get('/api/forms', (req, res) => {
 //     client.end();
 // })
 app.post('/api/form', (req, res) => {
-    res.json({
-        data: req.body
-    })
+    client.query('INSERT INTO job (company, email, url, timestamp) VALUES (?, ?, ? ,?);',(req.body.company,req.body.email,req.body.url, myTimestamp), (err, result) => {
+        if (err) throw err;
+        res.json({result})
+        // res.json({
+        //     data: req.body
+        // })
+    });
+    
 })
 
 app.get('/*', function(req, res) {
