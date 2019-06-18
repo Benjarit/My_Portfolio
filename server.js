@@ -22,10 +22,11 @@ app.get('/api/all', (req, res) => {
     });
 })
 app.post('/api/form', (req, res) => {
-    client.query('INSERT INTO job (company, email, url, timestamp) VALUES (?, ?, ? ,?)',[req.body.company,req.body.email,req.body.url, myTimestamp], (err, result) => {
+    client.query('INSERT INTO job (company, email, url, timestamp) VALUES ($1, $2, $3, $4)',[req.body.company,req.body.email,req.body.url, new Date()], (err, results, fields) => {
         if (err) throw err;
-        res.json({result})
+        res.json({data: req.body})
     });
+    client.end();
     // client.end();
     // res.json({
     //     data: req.body
