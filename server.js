@@ -12,30 +12,25 @@ const client = new Client({
   connectionString: process.env.DATABASE_URL,
   ssl: true,
 });
+client.connect();
 
 app.get('/api/forms', (req, res) => {
-    client.query('SELECT * FROM public.job', (err, result) => {
+    client.query('SELECT * FROM public.job;', (err, result) => {
         if (err) throw err;
         res.json(result);
     });
 })
 // app.post('/api/form', (req, res) => {
-// var myTimestamp = moment(Date.now()).format('YYYY-MM-DD HH:mm:ss');
-// client.query('INSERT INTO job (company, email, url, timestamp) VALUES (?, ?, ? ,?);',(req.body.company,req.body.email,req.body.url, myTimestamp), (err, result) => {
-//     res.json({data: req.body});
-// });
+//     var myTimestamp = moment(Date.now()).format('YYYY-MM-DD HH:mm:ss');
+//     client.query('INSERT INTO job (company, email, url, timestamp) VALUES (?, ?, ? ,?);',(req.body.company,req.body.email,req.body.url, myTimestamp), (err, result) => {
+//         res.json({data: req.body});
+//     });
 //     client.end();
 // })
 app.post('/api/form', (req, res) => {
-    client.connect();
-    var myTimestamp = moment(Date.now()).format('YYYY-MM-DD HH:mm:ss');
-    client.query('INSERT INTO job (company, email, url, timestamp) VALUES (?, ?, ? ,?)',(req.body.company,req.body.email,req.body.url, myTimestamp), (err, result) => {
-        if(err) throw err;
-    });
     res.json({
         data: req.body
     })
-    client.end();
 })
 
 app.get('/*', function(req, res) {
