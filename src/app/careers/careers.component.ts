@@ -30,7 +30,7 @@ export class CareersComponent implements OnInit {
     this.aboutme = "Ben has graudated from the University of Missouri - Columbia (UMC) in May 2019 with B.S. Computer Engineering, Math and Computer Science degree. " +
           "Before graduation, he was working as a Part-time Student Software Developer at College of Engineering and School of Natural Resources, "+
           "and he was also a Peer Learning Assistant where he had an oppotunity to help his fellows at school to perform beyond the standards in computer science and math courses. During his time as a software developer at UMC, "+
-          "he had contributed his work to many meaningful projects that help enhancing people lives. These lives include students, faculties, researches, and farmers.";
+          "he had contributed his work to many meaningful projects that help enhancing people lives including students, faculties, researches, and farmers.";
     
     this.workflowDescription = "A valuable system that is currently being used by the whole engineering department. The system"+
     " allows faculties and students to submit administrative work requests online. use it for submitting tickets for fiscal, HR and marketing/communications tasks, such as student orgs purchasing card requests,"+

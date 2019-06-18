@@ -16,8 +16,7 @@ export class BackgroundComponent implements OnInit {
   producerDescription = "Ben had offered affordable video editing services to more than 5 businesses."+ 
   " The videoes signicantly increased the number of sale activities and memberships to those businesses. He loves to creative video"+ 
   " content that engages audiences through the right message with impressive results from time to time within the affordable budget."+ 
-  " Ben had to effectively communicate to all team members while working effectively under multiple deadlines, and function under pressure."+ 
-  " This is a full-time entry level position.";
+  " Ben also had to effectively communicate to all team members while working effectively under multiple deadlines, and function under pressure.";
 
   developerDescription = "Ben began using computers and writing software at the age of 15 when he took his first computer science class during his junior year in high school."+
   " The class was titled Introduction to C++ Programming. It was the class where he first learned about his own passion, and since then he always wanted to become a software engineer"+

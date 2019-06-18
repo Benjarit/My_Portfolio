@@ -28,7 +28,7 @@ app.post('/api/form', (req, res) => {
         if (err){
           throw err;  
         } 
-        res.json({data: results});
+        res.send({msg:'New form added successfully'});
         client.end();
     });
 });
