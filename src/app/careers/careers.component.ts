@@ -53,11 +53,9 @@ export class CareersComponent implements OnInit {
     });
     
     this.http.get('https://api.github.com/users/benjarit')
-    .subscribe((response) => 
-    {
+    .subscribe((response) =>{
       this.response = response;
-    }
-    );
+    });
   }
 
 }

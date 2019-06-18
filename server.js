@@ -21,21 +21,15 @@ app.get('/api/forms', (req, res) => {
         res.json(result);
     });
 })
-// app.post('/api/form', (req, res) => {
-//     var myTimestamp = moment(Date.now()).format('YYYY-MM-DD HH:mm:ss');
-//     client.query('INSERT INTO job (company, email, url, timestamp) VALUES (?, ?, ? ,?);',(req.body.company,req.body.email,req.body.url, myTimestamp), (err, result) => {
-//         res.json({data: req.body});
-//     });
-//     client.end();
-// })
 app.post('/api/form', (req, res) => {
-    client.query('INSERT INTO job (company, email, url, timestamp) VALUES (?, ?, ? ,?);',(req.body.company,req.body.email,req.body.url, myTimestamp), (err, result) => {
-        if (err) throw err;
-        res.json({result})
-    });
-    // res.json({
-    //     data: req.body
-    // })
+    // client.query('INSERT INTO job (company, email, url, timestamp) VALUES (?, ?, ? ,?);',(req.body.company,req.body.email,req.body.url, myTimestamp), (err, result) => {
+    //     if (err) throw err;
+    //     res.json({result})
+    // });
+    // client.end();
+    res.json({
+        data: req.body
+    })
 })
 
 app.get('/*', function(req, res) {
