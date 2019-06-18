@@ -16,20 +16,18 @@ const client = new Client({
 client.connect();
 
 app.get('/api/all', (req, res) => {
-    client.query('SELECT * FROM public.job', (err, result) => {
+    client.query('SELECT * FROM public.job', (err, results) => {
         if (err) throw err;
-        res.json(result);
+        res.json(results.rows);
     });
 })
 app.post('/api/form', (req, res) => {
-    client.query('INSERT INTO job (company, email, url, timestamp) VALUES ($1, $2, $3, $4)',[req.body.company,req.body.email,req.body.url, new Date()], (err, results, fields) => {
-        if (err) throw err;
-        res.json({data: req.body});
+    client.query('INSERT INTO public.job (company, email, url, timestamp) VALUES ($1, $2, $3, $4)',[req.body.company,req.body.email,req.body.url, new Date()], (err, results) => {
+        if (err){
+          throw err;  
+        } 
+        res.status(201).send(`Form added with ID: ${results.job_id}`);
     });
-    client.end();
-    // res.json({
-    //     data: req.body
-    // })
 })
 
 app.get('/*', function(req, res) {
