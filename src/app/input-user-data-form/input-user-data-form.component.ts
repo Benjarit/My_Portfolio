@@ -18,23 +18,19 @@ export class InputUserDataFormComponent implements OnInit {
       url: ['',[Validators.required, Validators.required]],
       email: ['', [Validators.required, Validators.email]]
     });
-    // this.http.get('/api/forms')
+    // this.http.get('/api/all')
     // .subscribe((response) => {
     //   console.log(response);
     // });
   }
   onSubmit(){
-    this.http.get('/api/all')
-    .subscribe((response) => {
-      console.log(response);
-    });
-      // if(this.userForm.valid){
-      //   this.http.post('/api/form', this.userForm.value)
-      //   .subscribe((response)=>{
-      //     console.log('repsonse ',response);
-      //   })
-      // }else {
-      //   alert('User form is not valid!!')
-      // }
+      if(this.userForm.valid){
+        this.http.post('/api/form', this.userForm.value)
+        .subscribe((response)=>{
+          console.log('repsonse ',response);
+        })
+      }else {
+        alert('User form is not valid!!')
+      }
   }
 }
