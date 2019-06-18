@@ -29,6 +29,7 @@ export class InputUserDataFormComponent implements OnInit {
         .subscribe((response)=>{
           console.log('repsonse ',response);
         })
+        this.userForm.reset();
       }else {
         alert('User form is not valid!!')
       }
