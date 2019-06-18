@@ -24,7 +24,7 @@ app.get('/api/all', (req, res) => {
 });
 
 app.post('/api/form', (req, res) => {
-    client.query('INSERT INTO public.job (company, email, url, timestamp) VALUES ($1, $2, $3, $4)',[req.body.company,req.body.email,req.body.url, new Date()], (err, results) => {
+    client.query('INSERT INTO public.job (company, email, url, created_since) VALUES ($1, $2, $3, $4)',[req.body.company,req.body.email,req.body.url, new Date()], (err, results) => {
         if (err){
           throw err;  
         } 
