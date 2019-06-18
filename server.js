@@ -1,11 +1,12 @@
 //Install express server
 const express = require('express');
+var bodyParser = require("body-parser");
 const path = require('path');
 const app = express();
 const { Client } = require('pg');
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true}));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(express.static(__dirname + '/dist/my-portfolio'));
 
 const client = new Client({
@@ -31,11 +32,10 @@ app.post('/api/form', (req, res) => {
     client.query('INSERT INTO job (company, email, url, timestamp) VALUES (?, ?, ? ,?);',(req.body.company,req.body.email,req.body.url, myTimestamp), (err, result) => {
         if (err) throw err;
         res.json({result})
-        // res.json({
-        //     data: req.body
-        // })
     });
-    
+    // res.json({
+    //     data: req.body
+    // })
 })
 
 app.get('/*', function(req, res) {
