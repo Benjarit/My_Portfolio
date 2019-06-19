@@ -27,11 +27,11 @@ export class CareersComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.aboutme = "Ben has graudated from the University of Missouri - Columbia (UMC) in May 2019 with B.S. Computer Engineering, Math and Computer Science degree. " +
+    this.aboutme = "Ben has graduated from the University of Missouri - Columbia (UMC) in May 2019 with B.S. Computer Engineering, Math and Computer Science degree. " +
           "Before graduation, he was working as a Part-time Student Software Developer at College of Engineering and School of Natural Resources, "+
-          "and he was also a Peer Learning Assistant where he had an oppotunity to help his fellows at school to perform well beyond the standards in computer science and math courses. During his time as a software developer at UMC, "+
+          "and he was also a Peer Learning Assistant where he had an opportunity to help his fellows at school to perform well beyond the standards in computer science and math courses. During his time as a software developer at UMC, "+
           "he had contributed his work to many meaningful projects that make positive impacts on people lives like students, faculties, researchers, and farmers."+
-          " People find Ben to be an upbeat, self-motivated team player with excellent communication skills. Ben enjoys reading, and the knowledge and perspective that his reading gives him has strengthened his logical thinking skills and presentation abilities.";
+          " People find Ben to be an upbeat, self-motivated team player with excellent communication skills. Ben enjoys reading, and the knowledge and perspective that his reading gives him have strengthened his logical thinking skills and presentation abilities.";
     
     this.workflowDescription = "A valuable system that is currently being used by the whole engineering department. The system"+
     " allows faculties and students to submit administrative work requests online. People can use it for submitting tickets for fiscal, HR and marketing/communications tasks, such as student orgs purchasing card requests,"+

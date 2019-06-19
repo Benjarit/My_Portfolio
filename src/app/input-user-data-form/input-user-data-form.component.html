@@ -26,13 +26,13 @@
                     <h3 class="mb-4" style="font-weight:700;">Contact Ben</h3>
                     <div class="form-row mb-4">
                         <div class="col">
-                            <input type="text" formControlName="company" id="defaultRegisterFormFirstName" class="form-control" placeholder="Company/Full Name" required>  
+                            <input type="text" formControlName="company" id="defaultRegisterFormFirstName" class="form-control" [class.invalid]="company.invalid && (company.dirty || company.touched)" placeholder="Company/Full Name" required>  
                         </div>
                         <div class="col">
-                            <input type="email" formControlName="email" id="defaultRegisterFormEmail" class="form-control" placeholder="Email Address" required>     
+                            <input type="email" formControlName="email" id="defaultRegisterFormEmail" class="form-control" [class.invalid]="email.invalid && (email.dirty || email.touched)" placeholder="Email Address" required>     
                         </div>
                     </div>
-                    <input type="text" formControlName="url" id="defaultRegisterFormLink" class="form-control mb-4" placeholder="Link To Job Page" required>
+                    <input type="text" formControlName="url" id="defaultRegisterFormLink" class="form-control mb-4" [class.invalid]="url.invalid && (url.dirty || url.touched)" placeholder="Link To Job Page" required>
                     <textarea type="text" class="form-control" formControlName="comment" id="defaultRegisterFormComment" rows="4" placeholder="Comment..."></textarea>
                     <button class="btn btn-info my-4 btn-block" type="submit">Submit</button>
                 </form>
