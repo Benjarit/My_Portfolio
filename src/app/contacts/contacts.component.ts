@@ -9,6 +9,8 @@ import * as $ from 'jquery';
 })
 export class ContactsComponent implements OnInit {
 
+  info = "Please leave your contact information here and I will get back to you as soon as possible. ";
+
   constructor() { }
 
   ngOnInit() {

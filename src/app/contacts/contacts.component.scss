@@ -8,6 +8,12 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.center {
+  position: absolute;
+  left: 0;
+  top: 18%;
+  width: 100%;
+}
 
 p{
   color:rgba(0, 0, 0, 0.7);
@@ -61,14 +67,7 @@ p{
   font-size: 18px;
   line-height: 30px;
 }
-.center {
-  position: absolute;
-  left: 0;
-  top: 30%;
-  width: 100%;
-  text-align: center;
-  font-size: 18px;
-}
+
 
 .icon-with-desc{
   display: inline-block;

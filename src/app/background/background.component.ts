@@ -6,9 +6,7 @@ import * as $ from 'jquery';
   styleUrls: ['./background.component.scss']
 })
 export class BackgroundComponent implements OnInit {
-  //images = [`https://www.wallpapermaiden.com/wallpaper/6509/download/2560x1440/web-development-php-coding-classes.jpg`, 'https://www.wallpapermaiden.com/wallpaper/33782/download/2560x1440/forest-mist-trees-long-road-nature.jpeg'
-  //        , 'https://www.wallpapermaiden.com/wallpaper/33501/download/2560x1440/turkish-coffee-camera-drinks-top-view-cup-food.jpeg'];
-  
+
   heliDescription = "Ben started flying RC Helicopter when he was only 9 years old. He had competed in many world competitions with 3D as well as F3C, then he was approached by Align Corporation"+
   " to be a presenter/tester of their products. Align was and still be one of the top well-known companies in the world for quality unmanned aerial vehicle and other electronic components,"+
   " such as speed controllers, brushless motors, etc. He was ranked World No. 11 at the age of 13.";

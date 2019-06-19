@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder,FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-
+import * as $ from 'jquery';
 
 
 @Component({
@@ -14,9 +14,10 @@ export class InputUserDataFormComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private http: HttpClient) { }  
   ngOnInit() {
     this.userForm = this.formBuilder.group({
-      company: ['', [Validators.required, Validators.pattern('^[a-zA-Z]+$')]],
-      url: ['',[Validators.required, Validators.required]],
-      email: ['', [Validators.required, Validators.email]]
+      company: ['', [Validators.required]],
+      url: ['',[Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
+      comment: ['']
     });
     // this.http.get('/api/all')
     // .subscribe((response) => {
@@ -31,7 +32,10 @@ export class InputUserDataFormComponent implements OnInit {
         })
         this.userForm.reset();
       }else {
-        alert('User form is not valid!!')
+        alert("Invalid Input");
       }
   }
+  get company() { return this.userForm.get('company'); }
+  get url() { return this.userForm.get('url'); }
+  get email() { return this.userForm.get('email'); }
 }

@@ -1,16 +1,42 @@
-<div style="border: 1px solid #d8d8d8;margin-left: 15%;margin-right: 15%; background-color: rgba(255, 255, 255, 0.95)">
-    <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="text-center border border-light p-5">
-      <p class="h4 mb-4">Inquiries</p>
-
-      <div class="form-row mb-4">
-          <div class="col">
-              <input type="text" formControlName="company" id="defaultRegisterFormFirstName" class="form-control" placeholder="Company">
-          </div>
-          <div class="col">
-              <input type="email" formControlName="email" id="defaultRegisterFormLastName" class="form-control" placeholder="email">
-          </div>
-      </div>
-      <input type="text" formControlName="url" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="Link To the Job Page">
-      <button class="btn btn-info my-4 btn-block" type="submit">Send</button>
-    </form>
+<div class="container" style="padding-right:unset; padding-left:unset; ">
+    <div class="row">
+        <div class="col-3">
+            <div *ngIf="company.invalid && (company.dirty || company.touched)" >
+                <div *ngIf="company.errors.required" class="alert alert-danger">
+                    Compnany or Name is required.
+                </div>
+            </div> 
+            <div *ngIf="email.invalid && (email.dirty || email.touched)" >
+                <div *ngIf="email.errors.required" class="alert alert-danger">
+                    Email is required.
+                </div>
+                <div *ngIf="email.errors.email" class="alert alert-danger">
+                    Invalid email.
+                </div>
+            </div>
+            <div *ngIf="url.invalid && (url.dirty || url.touched)" >
+                <div *ngIf="url.errors.required" class="alert alert-danger">
+                    URL is required.
+                </div>
+            </div> 
+        </div>
+        <div class="col-9">
+            <div style="border: 1px solid #d8d8d8;background-color: white;">
+                <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="text-center border border-light p-5">
+                    <h3 class="mb-4" style="font-weight:700;">Contact Ben</h3>
+                    <div class="form-row mb-4">
+                        <div class="col">
+                            <input type="text" formControlName="company" id="defaultRegisterFormFirstName" class="form-control" placeholder="Company/Full Name" required>  
+                        </div>
+                        <div class="col">
+                            <input type="email" formControlName="email" id="defaultRegisterFormEmail" class="form-control" placeholder="Email Address" required>     
+                        </div>
+                    </div>
+                    <input type="text" formControlName="url" id="defaultRegisterFormLink" class="form-control mb-4" placeholder="Link To Job Page" required>
+                    <textarea type="text" class="form-control" formControlName="comment" id="defaultRegisterFormComment" rows="4" placeholder="Comment..."></textarea>
+                    <button class="btn btn-info my-4 btn-block" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div> 
 </div>
