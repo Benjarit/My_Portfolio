@@ -7,9 +7,13 @@ import * as $ from 'jquery';
 })
 export class BackgroundComponent implements OnInit {
 
+
+  rcHeliCopetitions: string[] = ["1st - Align T-Rex 450 Thailand Open 2009",  "1st - Hirobo Thailand Open 2007", "4th - Align FunFly Champtionship  2009", "3rd - 3D Masters 2008"];
+
+
   heliDescription = "Ben started flying RC Helicopter when he was only nine years old. He had competed in many world competitions with 3D as well as F3C, then he was approached by Align Corporation"+
   " to be a presenter/tester of their products. Align was and still is one of the top well-known RC suppliers in the world for their quality unmanned aerial vehicle and other electronic components,"+
-  " such as speed controllers, brushless motors, etc. He was ranked World No. 11 at the age of thirteen.";
+  " such as speed controllers, brushless motors, etc. He was ranked in the World top 10 at the age of thirteen.";
 
   producerDescription = "Ben had offered affordable video editing services to more than 5 businesses."+ 
   " The videoes signicantly increased the number of sale activities and memberships to those businesses. He loves to creative video"+ 
