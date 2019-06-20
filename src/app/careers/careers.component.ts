@@ -35,7 +35,7 @@ export class CareersComponent implements OnInit {
     
     this.workflowDescription = "A valuable system that is currently being used by the whole engineering department. The system"+
     " allows faculties and students to submit administrative work requests online. People can use it for submitting tickets for fiscal, HR and marketing/communications tasks, such as student orgs purchasing card requests,"+
-    " website edits, and digital marketing requests which reduce the requests processing time by 50%.";
+    " website edits, and digital marketing requests, which reduce the requests processing time by 50%.";
     
     this.argricultureDescription = "Ben had developed an application that is meant to help farmers and extension agents to understand the trees growing nearby which maybe useful for agroforestry systems."+
     " The application will also provide some data on the soil and climate of farmers' farm.";
