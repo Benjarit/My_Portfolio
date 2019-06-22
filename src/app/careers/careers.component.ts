@@ -11,7 +11,8 @@ import * as $ from 'jquery';
 
 export class CareersComponent implements OnInit {
 
-  response: any;
+  githubResponse: any;
+  youtubeResponse: any;
 
   aboutme: string;
   workflowDescription: string;
@@ -55,7 +56,11 @@ export class CareersComponent implements OnInit {
     
     this.http.get('https://api.github.com/users/benjarit')
     .subscribe((response) =>{
-      this.response = response;
+      this.githubResponse = response;
+    });
+    this.http.get('https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCXnmQqdbJzJb-OlfA2aYAvg&key=AIzaSyCI5KFJFBw8RD0h2HV5LjUIAitznVi_-7A')
+    .subscribe((response) =>{
+      this.youtubeResponse = response;
     });
   }
 
