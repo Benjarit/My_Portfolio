@@ -20,7 +20,7 @@ export class BackgroundComponent implements OnInit {
   " content that engages audiences through the right message with impressive results from time to time within the affordable budget."+ 
   " Ben also had to effectively communicate to all team members while working effectively under multiple deadlines, and function under pressure.";
 
-  developerDescription = "Ben began using computers and writing software at the age of 15 when he took his first computer science class during his junior year in high school."+
+  developerDescription = "Ben began using computers to write softwares at the age of 15 when he took his first computer science class during his junior year in high school."+
   " The class was titled Introduction to C++ Programming. It was the class where he learned about his passion for programming, and since then he always wanted to become a software engineer"+
   " so he can help change the world to become a better place. With this, he decided to pursue for computer engineering degree in college.";
 
