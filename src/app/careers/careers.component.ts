@@ -47,7 +47,7 @@ export class CareersComponent implements OnInit {
     this.yaffleDescription = "A meanningful system that helps connect researchers across the world with the people and places around it by providing a place for them to showcase expertise, research and publically engaged activities in an open and accessible way.";
     
     
-    $(document).ready(() => {
+    $(".bg").ready(() => {
       $("#fadeUpHeader").animate({ opacity: 1, top: "-50px" }, "slow","swing");
       $("#fadeUpContent").animate({ opacity: 1, top: "-70px" },"slow","linear");
     });
