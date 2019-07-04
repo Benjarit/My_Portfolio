@@ -27,11 +27,11 @@ export class BackgroundComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-      $(document).ready(function(){
-        $("#fadeUpHeader").animate({ opacity: 1, top: "-50px" }, "slow","swing");
-      });
-      $(document).ready(function(){
-        $("#fadeUpContent").animate({ opacity: 1, top: "-70px" },"slow","linear");
+      $(document).ready(() => {
+        $(".bg").fadeIn("slow").ready(() => {
+          $("#fadeUpHeader").animate({ opacity: 1, top: "-50px" }, "slow","swing");
+          $("#fadeUpContent").animate({ opacity: 1, top: "-70px" },"slow","linear");
+        });
       });
   }
 
