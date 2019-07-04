@@ -12,6 +12,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { InputUserDataFormComponent } from './input-user-data-form/input-user-data-form.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { AdminPageComponent } from './admin-page/admin-page.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     BackgroundComponent,
     ContactsComponent,
     LandingPageComponent,
-    InputUserDataFormComponent
+    InputUserDataFormComponent,
+    AdminPageComponent
   ],
   imports: [
     BrowserModule,
