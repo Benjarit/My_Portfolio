@@ -9,7 +9,7 @@ import * as $ from 'jquery';
 })
 export class ContactsComponent implements OnInit {
 
-  info = "Please leave your contact information here and I will get back to you as soon as possible, or, if it is more convenient, please feel free to contact me via email. My email is bjrhotra@gmail.com";
+  info = "Please leave your contact information here and I will get back to you as soon as possible, or, if it is more convenient, please feel free to contact me via email. My email is bjrhotra@gmail.com.";
 
   constructor() { }
 

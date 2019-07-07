@@ -9,7 +9,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CareersComponent } from './careers/careers.component';
 import { BackgroundComponent } from './background/background.component';
 import { ContactsComponent } from './contacts/contacts.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
 import { InputUserDataFormComponent } from './input-user-data-form/input-user-data-form.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AdminPageComponent } from './admin-page/admin-page.component';
@@ -22,7 +21,6 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
     CareersComponent,
     BackgroundComponent,
     ContactsComponent,
-    LandingPageComponent,
     InputUserDataFormComponent,
     AdminPageComponent
   ],

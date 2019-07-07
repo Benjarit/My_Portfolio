@@ -254,11 +254,11 @@
             <H1 style="font-weight:700;">Stats</H1>
             <H6>Powered by RESTful APIs</H6>
             <div style="padding-top: 40px; position: relative; width: 90%; padding-left: 10px; border-left: 1px solid;">
-                <p ><span style="font-size: 2.5rem">{{githubResponse.public_repos}}</span> Public Github Repositories</p>
+                <p ><span style="font-size: 2.5rem">{{githubResponse?.public_repos}}</span> Public Github Repositories</p>
                 <p ><span style="font-size: 2.5rem">265</span> Contributions On Github</p>
                 <p ><span style="font-size: 2.5rem">29</span> Problems Solved On LeetCode</p>
-                <p ><span style="font-size: 2.5rem">{{youtubeResponse.items[0].statistics.subscriberCount}}</span> Youtube Subscribers</p>
-                <p ><span style="font-size: 2.5rem">{{youtubeResponse.items[0].statistics.viewCount}}</span> Total Views On Youtube</p>
+                <p ><span style="font-size: 2.5rem">{{youtubeResponse?.items[0].statistics.subscriberCount}}</span> Youtube Subscribers</p>
+                <p ><span style="font-size: 2.5rem">{{youtubeResponse?.items[0].statistics.viewCount}}</span> Total Views On Youtube</p>
             </div>
         </div>
         <div class="col-lg-7">
