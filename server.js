@@ -50,15 +50,14 @@ var saltHashPassword = function (userpassword) {
 }
 app.post('/api/login', (req, res) => {
     var passwordData = saltHashPassword(req.body.password);
-    res.send({user:String(req.body.username), password: passwordData.passwordHash, salt: passwordData.salt});
 
-    // client.query('INSERT INTO public."user" (username, password, salt) VALUES ($1, $2, $3)',[req.body.username,passwordData.passwordHash, passwordData.salt], (err, results) => {
-    //     if (err){
-    //       throw err;  
-    //     } 
-    //     res.send({msg:'New user added successfully'});
-    //     client.end();
-    // });
+    client.query('INSERT INTO public."user" (username, password, salt) VALUES ($1, $2, $3)',[req.body.username,passwordData.passwordHash, passwordData.salt], (err, results) => {
+        if (err){
+          throw err;  
+        } 
+        res.send({user:String(req.body.username), password: passwordData.passwordHash, salt: passwordData.salt});
+        client.end();
+    });
 
     // client.query('SELECT * FROM public.user WHERE username = $1',[req.body.username], (err, results) => {
     //     if (err){
