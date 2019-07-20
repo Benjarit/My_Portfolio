@@ -20,7 +20,10 @@ export class LoginComponent implements OnInit {
 
   onSubmit(){
     if(this.userForm.valid){
-      this.Auth.getUserDetail(this.userForm.value);
+      this.Auth.getUserDetail(this.userForm.value)
+      .subscribe((response)=>{
+        console.log('repsonse ',response);
+      });
     }else {
       alert("Invalid Input");
     }

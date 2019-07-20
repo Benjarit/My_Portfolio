@@ -11,10 +11,7 @@ export class AuthService {
   
   getUserDetail(loginInfo: userInfo){
     console.log(loginInfo);
-    this.http.post('/post/login', loginInfo)
-    .subscribe((response)=>{
-      console.log('repsonse ',response);
-    });
+    return this.http.post('/api/login', loginInfo);
   }
 }
 interface userInfo{
