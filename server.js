@@ -49,23 +49,20 @@ var saltHashPassword = function (userpassword) {
     return passwordData;
 }
 app.post('/api/login', (req, res) => {
-    var passwordData = saltHashPassword(req.body.password);
 
-    client.query('INSERT INTO public."user" (username, password, salt) VALUES ($1, $2, $3)',[req.body.username,passwordData.passwordHash, passwordData.salt], (err, results) => {
+    client.query('SELECT * FROM public.user WHERE username = ($1)',[req.body.username], (err, results) => {
         if (err){
           throw err;  
+        } 
+        var passwordData = sha512(req.body.password,results.rows[0].salt);
+    
+        if(passwordData.passwordHash == results.rows[0].password){
+            res.send({msg:'Login successfully'});
+        }else{
+            res.send({msg:'Login unsuccessfully'});
         }
-        res.send({user:String(req.body.username), password: passwordData.passwordHash, salt: passwordData.salt});
         client.end();
     });
-    
-    // client.query('SELECT * FROM public.user WHERE username = $1',[req.body.username], (err, results) => {
-    //     if (err){
-    //       throw err;  
-    //     } 
-    //     res.send({msg:'New form added successfully'});
-    //     client.end();
-    // });
 });
 
 app.get('/api/all', (req, res) => {
