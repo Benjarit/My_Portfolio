@@ -22,7 +22,11 @@ export class LoginComponent implements OnInit {
     if(this.userForm.valid){
       this.Auth.getUserDetail(this.userForm.value)
       .subscribe((response)=>{
-        console.log('repsonse ',response);
+        if(response.sucess){
+          console.log("You are now in!!");
+        }else{
+          console.log("You are not in yet!!");
+        }
       });
     }else {
       alert("Invalid Input");

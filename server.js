@@ -48,17 +48,17 @@ var saltHashPassword = function (userpassword) {
     var passwordData = sha512(userpassword, salt);
     return passwordData;
 }
-app.post('/api/login', (req, res) => {
+app.post('/api/user', (req, res) => {
     client.query('SELECT * FROM public.user WHERE username = ($1)',[req.body.username], (err, results) => {
         if (err){
           throw err;  
         } 
         var passwordData = sha512(req.body.password,results.rows[0].salt);
         if(passwordData.passwordHash == results.rows[0].password){
-            res.send({sucess: "True", msg:"Login successfully"});
+            res.send({sucess: true, msg:"Login successfully"});
             client.end();
         }else{
-            res.send({sucess: "False", msg:"Login unsuccessfully"});
+            res.send({sucess: false, msg:"Login unsuccessfully"});
         }
     });
 });
