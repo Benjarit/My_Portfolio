@@ -9,12 +9,8 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
   
-  getUserDetail(loginInfo: userInfo){
+  getUserDetail(loginInfo){
     console.log(loginInfo);
     return this.http.post('/api/login', loginInfo);
   }
-}
-interface userInfo{
-  username: String;
-  password: String;
 }
