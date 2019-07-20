@@ -25,4 +25,6 @@ export class LoginComponent implements OnInit {
       alert("Invalid Input");
     }
   }
+  get username() { return this.userForm.get('username'); }
+  get password() { return this.userForm.get('password'); }
 }

@@ -18,10 +18,6 @@ export class InputUserDataFormComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       comment: ['']
     });
-    // this.http.get('/api/all')
-    // .subscribe((response) => {
-    //   console.log(response);
-    // });
   }
   onSubmit(){
       if(this.userForm.valid){
