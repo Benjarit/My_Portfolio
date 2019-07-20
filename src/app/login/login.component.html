@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row justify-content-center" style="padding-top: 100px">
+      <div class="col-8">
+          <div style="border: 1px solid #d8d8d8;background-color: white;">
+              <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="text-center border border-light p-5">
+                  <h3 class="mb-4" style="font-weight:700;">Sign In As Admin</h3>
+                  <div class="form-row mb-4">
+                      <div class="col">
+                          <input type="text" formControlName="username" id="defaultRegisterFormFirstName" class="form-control" [class.invalid]="username.invalid && (username.dirty || username.touched)" placeholder="Username" required>  
+                      </div>
+                  </div>
+                  <div class="form-row mb-4">
+                    <div class="col">
+                      <input type="password" formControlName="password" id="defaultRegisterFormEmail" class="form-control" [class.invalid]="password.invalid && (password.dirty || password.touched)" placeholder="Password" required>     
+                    </div>
+                  </div>
+                  <button class="btn btn-info my-4 btn-block" type="submit">Sign in</button>
+              </form>
+          </div>
+      </div>
+  </div> 
+</div>

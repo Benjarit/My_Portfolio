@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { WebInfoService } from '../web-info.service';
+
 import * as $ from 'jquery';
 
 @Component({
@@ -25,7 +26,7 @@ export class CareersComponent implements OnInit {
   scadaDescription: string;
   yaffleDescription: string;
 
-  constructor(private http: HttpClient) {}
+  constructor(private webService: WebInfoService) {}
 
   ngOnInit() {
     this.aboutme = "Ben graduated from University of Missouri - Columbia (UMC) on May 2019 with B.S. Computer Engineering, Math and Computer Science degree. " +
@@ -52,14 +53,20 @@ export class CareersComponent implements OnInit {
       $("#fadeUpContent").animate({ opacity: 1, top: "-70px" },"slow","linear");
     });
     
-    this.http.get('https://api.github.com/users/benjarit')
-    .subscribe((response) =>{
+    this.getGithubRespo();
+    this.getYoutubeInfo();
+  }
+
+  getGithubRespo(): void{
+    this.webService.getGithubInfo()
+    .subscribe(response =>{
       this.githubResponse = response;
     });
-    this.http.get('https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCXnmQqdbJzJb-OlfA2aYAvg&key=AIzaSyCI5KFJFBw8RD0h2HV5LjUIAitznVi_-7A')
-    .subscribe((response) =>{
+  }
+  getYoutubeInfo(): void{
+    this.webService.getYoutubeInfo()
+    .subscribe(response =>{
       this.youtubeResponse = response;
     });
   }
-
 }

@@ -11,7 +11,8 @@ import { BackgroundComponent } from './background/background.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { InputUserDataFormComponent } from './input-user-data-form/input-user-data-form.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { AdminPageComponent } from './admin-page/admin-page.component';
+import { LoginComponent } from './login/login.component';
+import { JobListComponent } from './job-list/job-list.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
     BackgroundComponent,
     ContactsComponent,
     InputUserDataFormComponent,
-    AdminPageComponent
+    LoginComponent,
+    JobListComponent
   ],
   imports: [
     BrowserModule,
