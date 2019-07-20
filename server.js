@@ -50,7 +50,7 @@ var saltHashPassword = function (userpassword) {
 }
 app.post('/api/login', (req, res) => {
     var passwordData = saltHashPassword(req.body.password);
-    res.send({user:String(req.body.usernam), password: passwordData.passwordHash, salt: passwordData.salt});
+    res.send({user:String(req.body.username), password: passwordData.passwordHash, salt: passwordData.salt});
 
     // client.query('INSERT INTO public."user" (username, password, salt) VALUES ($1, $2, $3)',[req.body.username,passwordData.passwordHash, passwordData.salt], (err, results) => {
     //     if (err){
