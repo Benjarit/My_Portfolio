@@ -14,7 +14,6 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { JobListComponent } from './job-list/job-list.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,4 +36,4 @@ import { JobListComponent } from './job-list/job-list.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

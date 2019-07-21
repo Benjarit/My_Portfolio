@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from "../auth.service";
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,7 @@ import { AuthService } from "../auth.service";
 })
 export class LoginComponent implements OnInit {
   userForm: FormGroup;
-  constructor(private formBuilder: FormBuilder, private Auth: AuthService) { }  
+  constructor(private formBuilder: FormBuilder, private auth: AuthService, private router: Router) { }  
   
   ngOnInit() {
     this.userForm = this.formBuilder.group({
@@ -20,15 +21,16 @@ export class LoginComponent implements OnInit {
 
   onSubmit(){
     if(this.userForm.valid){
-      this.Auth.getUserDetail(this.userForm.value)
+      this.auth.getUserDetail(this.userForm.value)
       .subscribe((response)=>{
         if(response.sucess){
-          console.log("You are now in!!");
+          this.auth.login = true;
+          this.router.navigate(['joblist']);
         }else{
-          console.log("You are not in yet!!");
+          window.alert("You are not in yet!!");
         }
       });
-    }else {
+    }else{
       alert("Invalid Input");
     }
   }
