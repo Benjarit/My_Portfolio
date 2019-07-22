@@ -10,7 +10,10 @@ interface Server{
   sucess: boolean;
   msg: String;
 }
-
+class Tokens {
+  jwt: string;
+  refreshToken: string;
+}
 @Injectable({
   providedIn: 'root'
 })
@@ -30,5 +33,8 @@ export class AuthService {
   }
   get login(){
     return this._login;
+  }
+  private storeToken(token: Tokens){
+
   }
 }
