@@ -34,7 +34,5 @@ export class AuthService {
   get login(){
     return this._login;
   }
-  private storeToken(token: Tokens){
-
-  }
+  private storeToken(token: Tokens){ }
 }

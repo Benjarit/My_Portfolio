@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   isCollapsed = true;
-  _option = "login"
+  _option = "Jobs"
   constructor() { }
 
   set option(title: string){

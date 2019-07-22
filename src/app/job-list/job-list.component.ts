@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { HttpClient } from '@angular/common/http';
+import { FormsService } from '../forms.service';
 @Component({
   selector: 'app-job-list',
   templateUrl: './job-list.component.html',
@@ -7,12 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JobListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpClient, private formservice: FormsService) { }
 
   ngOnInit() {
+    this.formservice.getUserDetail().subscribe((response) => {
+      console.log(response);
+    });
   }
-    // this.http.get('/api/all')
-    // .subscribe((response) => {
-    //   console.log(response);
-    // });
 }
