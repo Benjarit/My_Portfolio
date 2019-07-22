@@ -11,8 +11,8 @@ export class JobListComponent implements OnInit {
   constructor(private formservice: FormsService) { }
 
   ngOnInit() {
-    // this.formservice.getUserDetail().subscribe((response) => {
-    //   console.log(response);
-    // });
+    this.formservice.getUserDetail().subscribe((response) => {
+      console.log(response);
+    });
   }
 }

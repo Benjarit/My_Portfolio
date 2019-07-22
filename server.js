@@ -55,7 +55,7 @@ app.post('/api/user', (req, res) => {
         } 
         var passwordData = sha512(req.body.password,results.rows[0].salt);
         if(passwordData.passwordHash == results.rows[0].password){
-            res.send({sucess: true, msg:"Login successfully"});
+            res.status(201).send({sucess: true, msg:"Login successfully"});
             client.end();
         }else{
             res.send({sucess: false, msg:"Login unsuccessfully"});
@@ -66,8 +66,7 @@ app.post('/api/user', (req, res) => {
 app.get('/api/all', (req, res) => {
     client.query('SELECT * FROM public.job', (err, results) => {
         if (err) throw err;
-        res.json(results.rows);
-        client.end();
+        res.status(200).json(results.rows);
     });
 });
 
@@ -76,7 +75,7 @@ app.post('/api/form', (req, res) => {
         if (err){
           throw err;  
         } 
-        res.send({msg:'New form added successfully'});
+        res.status(201).send({msg:'New form added successfully'});
         client.end();
     });
 });
