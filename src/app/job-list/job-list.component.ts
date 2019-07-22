@@ -8,11 +8,11 @@ import { FormsService } from '../forms.service';
 })
 export class JobListComponent implements OnInit {
 
-  constructor(private http: HttpClient, private formservice: FormsService) { }
+  constructor(private formservice: FormsService) { }
 
   ngOnInit() {
-    this.formservice.getUserDetail().subscribe((response) => {
-      console.log(response);
-    });
+    // this.formservice.getUserDetail().subscribe((response) => {
+    //   console.log(response);
+    // });
   }
 }
