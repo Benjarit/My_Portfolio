@@ -1,3 +1,4 @@
+'use strict';
 //Install express server
 const express = require('express');
 var bodyParser = require("body-parser");
@@ -5,7 +6,7 @@ const path = require('path');
 const app = express();
 const { Client } = require('pg');
 
-'use strict';
+
 var crypto = require('crypto');
 
 app.use(bodyParser.urlencoded({ extended: true }));
