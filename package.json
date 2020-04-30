@@ -27,7 +27,7 @@
     "bootstrap": "^4.3.1",
     "core-js": "^2.5.4",
     "express": "^4.17.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "path": "^0.12.7",
     "pg": "^7.11.0",
     "querystringify": "^2.1.1",
